@@ -68,9 +68,9 @@ sed -i 's/^color_preset=.*/color_preset=Tango/' ~/.config/lxterminal/lxterminal.
 # -----------------------------------------------------------------------------
 # 6. Pulizia
 # -----------------------------------------------------------------------------
-echo "🧹 Pulizia..."
-sudo apt-get clean
-sudo rm -rf /var/lib/apt/lists/*
+#echo "🧹 Pulizia..."
+#sudo apt-get clean
+#sudo rm -rf /var/lib/apt/lists/*
 
 # -----------------------------------------------------------------------------
 # Completato!
