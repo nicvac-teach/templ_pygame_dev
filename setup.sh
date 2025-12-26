@@ -49,9 +49,8 @@ sudo ln -sf vnc.html /usr/share/novnc/index.html
 # Personalizza Menu FluxBox (mostra solo il terminale)
 # -----------------------------------------------------------------------------
 
-if [ ! -e ~/.fluxbox/menu_original ]; then
-    mv ~/.fluxbox/menu ~/.fluxbox/menu_original 
-    cat > ~/.fluxbox/menu << 'EOF'
+mkdir -p ~/.fluxbox
+cat > ~/.fluxbox/menu << 'EOF'
 [begin] (Fluxbox)
   [exec] (Terminal) {lxterminal -e bash}
   [separator]
@@ -59,10 +58,9 @@ if [ ! -e ~/.fluxbox/menu_original ]; then
   [exit] (Exit)
 [end]
 EOF
-fi
 
 # Configura il terminale grafico
-sed -i 's/^color_preset=.*/color_preset=Tango/' ~/.config/lxterminal/lxterminal.conf
+#sed -i 's/^color_preset=.*/color_preset=Tango/' ~/.config/lxterminal/lxterminal.conf
 
 
 # -----------------------------------------------------------------------------
