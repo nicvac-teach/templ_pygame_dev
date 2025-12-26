@@ -1,24 +1,23 @@
 {
-  "name": "Python Pygame Environment",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "name": "nicvac-teach Pygame Environment",
   
   "customizations": {
     "vscode": {
+      // Set *default* container specific settings.json values on container create.
+      "settings": { 
+			}
+			,
+      // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
         "ms-python.python",
         "ms-python.vscode-pylance",
         "ms-python.debugpy",
         "ms-python.black-formatter"
-      ],
-      "settings": {
-        "python.defaultInterpreterPath": "/usr/bin/python3",
-        "python.formatting.provider": "none",
-        "editor.formatOnSave": true
-      }
+      ]
     }
   },
 
-  "postCreateCommand": "python3 setup_and_start.py",
+  "postCreateCommand": "git config pull.rebase false && python3 setup_and_start.py",
   
   "forwardPorts": [6080],
   "portsAttributes": {
