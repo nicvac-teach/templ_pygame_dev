@@ -20,6 +20,7 @@
   //"postCreateCommand": "git config pull.rebase false && python3 setup_and_start.py",
   "postCreateCommand": "git config pull.rebase false",
   
+  /*
   "forwardPorts": [6080],
   "portsAttributes": {
     "6080": {
@@ -27,5 +28,6 @@
       "onAutoForward": "openBrowser"
     }
   }
+  */
 
 }
