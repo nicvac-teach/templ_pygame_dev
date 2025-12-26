@@ -1,0 +1,31 @@
+{
+  "name": "Python Pygame Environment",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "ms-python.black-formatter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "python.formatting.provider": "none",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+
+  "postCreateCommand": "python3 setup_and_start.py",
+  
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "noVNC Desktop",
+      "onAutoForward": "openBrowser"
+    }
+  }
+
+}
